@@ -18,10 +18,9 @@
 
 			>a {
 				border-radius: 50%;
-				border: 1px solid;
-				color: $color-default;
+				border: none;
 				display: block;
-				font-size: 1.125em;
+				font-size: 1.5em;
 				height: 2em;
 				line-height: 2em;
 				text-align: center;
@@ -35,4 +34,24 @@
 			}
 		}
 	}
+}
+
+.share-facebook {
+	@include buttonColor(#036be4, $white, "darken", 10%);
+}
+
+.share-twitter {
+	@include buttonColor(#55acee, $white, "darken", 10%);
+}
+
+.share-linkedin {
+	@include buttonColor(#007bb5, $white, "darken", 10%);
+}
+
+.share-whatsapp {
+	@include buttonColor(#25D366, $white, "darken", 10%);
+}
+
+.share-telegram {
+	@include buttonColor(#0088cc, $white, "lighten", 10%);
 }
