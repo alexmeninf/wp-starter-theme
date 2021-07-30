@@ -31,6 +31,7 @@ $default-spacing-x: 0 !default;
 // components/_button.scss
 @mixin buttonColor($bg, $color, $colorHover, $amount: 10%) {
   background-color: $bg;
+  border-color: $bg;
   color: $color;
 
   &:hover,
@@ -38,10 +39,12 @@ $default-spacing-x: 0 !default;
   &:focus {
     @if $colorHover=='lighten' {
       background-color: lighten($bg, $amount);
+      border-color: lighten($bg, $amount);
     }
 
     @else if $colorHover=='darken' {
       background-color: darken($bg, $amount);
+      border-color: darken($bg, $amount);
     }
 
     color: $color;
