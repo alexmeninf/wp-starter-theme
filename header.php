@@ -9,22 +9,13 @@
 
 	<?php wp_head(); ?>
 
-	<?php 
-	// Código de incorporação de analytics
-	if ( function_exists('get_field') ) : 
-		the_field('code_analytics_head', 'options');
-	endif; ?>
-
 </head>
 <body <?php body_class() ?>>
 	<?php wp_body_open(); ?>
 
-	<?php 
-	// Código após abertura do <body> para analitycs
-	if ( function_exists('get_field') )
-		the_field('code_analytics_after_body', 'options');
+	<?php
 
 	// Título das páginas
-	if ( ! (is_front_page() || is_home()) ) 
+	if ( ! (is_front_page() || is_home()) && get_option('enable_navbar_page') == true ) 
 		get_template_part('template-parts/navigation/navbar');
 	?>

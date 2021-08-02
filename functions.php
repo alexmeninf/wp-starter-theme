@@ -53,7 +53,9 @@ new_js('swiped-events', 'assets/js/swiped-events.min.js', true);
 new_js('main-default', 'assets/js/main.js', true);
 
 /*----------  Use JS Default  ----------*/
-use_js('jquery-default');
+if ( ! is_plugin_active( 'elementor/elementor.php' ) ) {
+  use_js('jquery-default');
+}
 //use_js('utilities');
 // use_js('popper-default');
 // use_js('bootstrap-default');
