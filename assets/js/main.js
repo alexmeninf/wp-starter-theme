@@ -1,4 +1,4 @@
-jQuery(function () {
+jQuery(function ($) {
   
   // $("input[type=tel], .mask-phone").on("keyup", function () {
   //   if ($(this).val().length >= 15) {
