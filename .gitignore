@@ -1,4 +1,4 @@
-assets/**/.sass-cache/
-assets/**/*.css.map
-assets/**/*.scssc
+**/.sass-cache/
+**/*.css.map
+**/*.scssc
 node_modules/
