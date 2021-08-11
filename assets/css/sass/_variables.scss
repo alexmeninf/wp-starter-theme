@@ -29,25 +29,25 @@ $default-spacing-x: 0 !default;
 }
 
 // components/_button.scss
-@mixin buttonColor($bg, $color, $colorHover, $amount: 10%) {
+@mixin buttonColor($bg, $color, $density, $amount: 0%, $bgHover, $colorHover) {
   background-color: $bg;
-  border-color: $bg;
   color: $color;
+  border-color: $bgHover;
 
   &:hover,
   &:active,
   &:focus {
-    @if $colorHover=='lighten' {
-      background-color: lighten($bg, $amount);
-      border-color: lighten($bg, $amount);
+    @if $density=='lighten' {
+      background-color: lighten($bgHover, $amount);
+      border-color: lighten($bgHover, $amount);
     }
 
-    @else if $colorHover=='darken' {
-      background-color: darken($bg, $amount);
-      border-color: darken($bg, $amount);
+    @else if $density=='darken' {
+      background-color: darken($bgHover, $amount);
+      border-color: darken($bgHover, $amount);
     }
 
-    color: $color;
+    color: $colorHover;
   }
 }
 
