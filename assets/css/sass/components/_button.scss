@@ -12,11 +12,16 @@
   vertical-align: middle;
 
   > i {
-    font-size: 150%;
+    font-size: 110%;
     vertical-align: middle;
+    margin-right: 10px;
   }
 
   @include buttonColor($color-default, darken($color-default, 70%), "lighten", 10%, $color-default, darken($color-default, 70%));
+}
+
+.btn-small {
+  font-size: 18px;
 }
 
 .btn-theme-inverse {
