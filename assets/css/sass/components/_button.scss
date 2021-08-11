@@ -16,6 +16,10 @@
     vertical-align: middle;
   }
 
-  // aplique o background, cor e hover aqui abaixo
-  @include buttonColor($color-default, $white, "lighten", 10%);
+  @include buttonColor($color-default, darken($color-default, 70%), "lighten", 10%, $color-default, darken($color-default, 70%));
+}
+
+.btn-theme-inverse {
+  border: 1px solid;
+  @include buttonColor(transparent, $color-default, "lighten", 10%, $color-default,  darken($color-default, 70%));
 }
