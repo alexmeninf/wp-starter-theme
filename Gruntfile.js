@@ -19,13 +19,22 @@ module.exports = function (grunt) {
           //"assets/plugins/wow/js/wow.min.js",
           // 'assets/js/countdown.js',
           // 'assets/js/swiped-events.min.js',
-          "assets/plugins/scroll-magic/plugins/gsap.min.js",
-          "assets/plugins/scroll-magic/ScrollMagic.min.js",
-          "assets/plugins/scroll-magic/plugins/animation.gsap.min.js",
           "assets/js/main.js",
         ],
-        dest: "assets/js/built.min.js",
+        dest: "assets/js/built.js",
       },
+    },
+    uglify: {
+      options: {
+        mangle: {
+          reserved: ['jQuery']
+        }
+      },  
+      my_target: {
+        files: {
+          'assets/js/built.min.js': ['assets/js/built.js']
+        }
+      }
     },
     watch: {
       js: {
@@ -35,7 +44,8 @@ module.exports = function (grunt) {
     },
   });
 
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.registerTask("default", ["concat", "watch"]);
+  grunt.registerTask("default", ["concat", "uglify", "watch"]);
 };
