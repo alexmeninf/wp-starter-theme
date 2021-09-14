@@ -1,5 +1,5 @@
 <div class="share-post">
-  <span>Compartilhe nas redes</span>
+  <span><?php _e('Compartilhe nas redes sociais', 'menin') ?></span>
   <ul>
     <li>
       <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink() ?>&redirect_uri=<?php the_permalink() ?>" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>

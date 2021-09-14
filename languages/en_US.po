@@ -1,0 +1,275 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wp-starter-theme\n"
+"POT-Creation-Date: 2021-09-14 17:39-0300\n"
+"PO-Revision-Date: 2021-09-14 17:41-0300\n"
+"Last-Translator: \n"
+"Language-Team: https://github.com/alexmeninf\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr_x\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:9 inc/theme.php:132 index.php:9
+msgid "Página não encontrada"
+msgstr "Page not found"
+
+#: 404.php:11 index.php:11
+msgid ""
+"Desculpe, mas parece que a página que você acessou não existe ou pode ter "
+"sido removida."
+msgstr ""
+"Sorry, but it looks like the page you accessed doesn't exist or may have "
+"been removed."
+
+#: 404.php:13 index.php:13
+msgid "Voltar ao Início"
+msgstr "Back to home"
+
+#: assets/plugins/bootstrap/js/bootstrap.min.js:6
+msgid "modal"
+msgstr ""
+
+#: assets/plugins/bootstrap/js/bootstrap.min.js:6
+msgid "toast"
+msgstr ""
+
+#: footer.php:5
+msgid "Todos os direitos reservados."
+msgstr "All rights reserved."
+
+#: footer.php:9
+msgid "Desenvolvido por"
+msgstr "Developed by"
+
+#: inc/form/form.php:17
+msgid "Formulários"
+msgstr "Forms"
+
+#: inc/form/form.php:18
+msgid "Todos os formulários"
+msgstr "All forms"
+
+#: inc/form/form.php:19
+msgid "Adicionar novo formulário"
+msgstr "Add new form"
+
+#: inc/form/form.php:20
+msgid "Novo formulário"
+msgstr "New form"
+
+#: inc/form/form.php:21
+msgid "Editar formulário"
+msgstr "Edit form"
+
+#: inc/form/form.php:22
+msgid "Atualizar formulário"
+msgstr "Update form"
+
+#: inc/form/form.php:23
+msgid "Buscar formulário"
+msgstr "Search form"
+
+#: inc/form/form.php:27
+msgid "Formulário"
+msgstr "Form"
+
+#: inc/form/form.php:28
+msgid "Adicione um novo formulário de envio."
+msgstr "Add a new submission form."
+
+#: inc/form/form.php:63
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: inc/form/template-form.php:39 inc/form/template-form.php:166
+msgid "Enviar"
+msgstr "Send"
+
+#: inc/form/template-form.php:105
+#, php-format
+msgid "Escolha uma opção em <b>%s</b>."
+msgstr "Choose an option from <b>%s</b>."
+
+#: inc/form/template-form.php:120
+#, php-format
+msgid "O campo <b>%s</b> é obrigatório."
+msgstr "The <b>%s</b> field is required."
+
+#: inc/form/template-form.php:144
+msgid "Enviando..."
+msgstr "Sending..."
+
+#: inc/form/template-form.php:151
+msgid "Enviado!"
+msgstr "Sent!"
+
+#: inc/form/template-form.php:152
+msgid "Suas informações foram enviadas com sucesso."
+msgstr "Your information has been sent successfully."
+
+#: inc/form/template-form.php:154
+msgid "Fechar"
+msgstr "Close"
+
+#: inc/form/template-form.php:159
+msgid "Algo deu errado!"
+msgstr "Something went wrong!"
+
+#: inc/page-details-cpl.php:18
+msgid "Material de apoio"
+msgstr "Support material"
+
+#: inc/page-details-cpl.php:67
+msgid "Em breve"
+msgstr "Coming soon"
+
+#: inc/theme.php:118 inc/theme.php:119
+msgid "Opções do site"
+msgstr "Site Options"
+
+#: inc/theme.php:145 inc/theme.php:148 inc/theme.php:151
+msgid "Registros de "
+msgstr "Archives of"
+
+#: inc/theme.php:154
+msgid "Registros do autor"
+msgstr "Author archive"
+
+#: inc/theme.php:157
+msgid "Registros do blog"
+msgstr "Blog archive"
+
+#: inc/theme.php:160
+msgid "Resultados da pesquisa"
+msgstr "Search results"
+
+#: inc/theme.php:165
+msgid "Os melhores produtos para você"
+msgstr "The best products for you"
+
+#: inc/theme.php:194
+msgid "Não consegue comentar?"
+msgstr "Can't comment?"
+
+#: inc/theme.php:195
+msgid ""
+"<a href=\"https://facebook.com/home.php\" target=\"_blank\" rel=\"noreferrer "
+"noopener\" title=\"Conecte ao facebook\" class=\"text-decoration-none color-"
+"facebook\">Conecte à sua conta do Facebook</a> em outra página e volte."
+msgstr ""
+"<a href=\"https://facebook.com/home.php\" target=\"_blank\" rel=\"noreferrer "
+"noopener\" title=\"Connect to facebook\" class=\"text-decoration-none color-"
+"facebook\">Connect to your Facebook account</a> on another page and come "
+"back."
+
+#: inc/theme.php:286
+msgid "Página anterior"
+msgstr "Previous page"
+
+#: inc/theme.php:324
+msgid "Próxima página"
+msgstr "Next page"
+
+#: inc/theme.php:343
+msgid "Widget principal esquerdo"
+msgstr "Main left widget"
+
+#: inc/theme.php:345
+msgid "Adicione widgets aqui para aparecer no seu layout."
+msgstr "Add widgets here to appear on your layout."
+
+#: search.php:45
+#, php-format
+msgid "Resultados relacionados com %s"
+msgstr "Results related to %s"
+
+#: search.php:48
+#, php-format
+msgid "Exibindo todos %s resultados encontrados."
+msgstr "Displaying all %s found results."
+
+#: search.php:48
+msgid "Exibindo um único resultado."
+msgstr "Showing a single result."
+
+#: search.php:73
+#, php-format
+msgid "Nenhum resultado com o nome <b>%s</b> foi encontrado."
+msgstr "No results with the name <b>%s</b> were found."
+
+#: search.php:86
+msgid "Nenhum resultado foi encontrado, você deve digitar o que busca."
+msgstr "No results were found, you must type what you are looking for."
+
+#: searchform.php:5
+msgid "Pesquisar..."
+msgstr "Search..."
+
+#: searchform.php:7
+msgid "Buscar por:"
+msgstr "Search for:"
+
+#: searchform.php:10
+msgid "Buscar"
+msgstr "Search"
+
+#: sidebar.php:5
+msgid "Buscar no site"
+msgstr "Search"
+
+#: sidebar.php:10
+msgid "Categorias"
+msgstr "Categories"
+
+#: sidebar.php:15 template-parts/post/get_tags.php:10
+msgid "Tags"
+msgstr "Tags"
+
+#: sidebar.php:20
+msgid "Registros"
+msgstr "Archives"
+
+#: single.php:13
+#, php-format
+msgid "Publicado em %s"
+msgstr "Posted in %s"
+
+#: single.php:33
+msgid "Publicado por"
+msgstr "Published by"
+
+#: single.php:39
+msgid "Comentários"
+msgstr "Comments"
+
+#: template-parts/post/get_categories.php:8
+#: template-parts/sidebar/get_categories.php:18
+#, php-format
+msgid "Visualizar todos os posts em %s"
+msgstr "View all posts in %s"
+
+#: template-parts/post/get_prev-next-posts.php:8
+#: template-parts/post/get_prev-next-posts.php:15
+msgid "Ver postagem"
+msgstr "View post"
+
+#: template-parts/post/get_prev-next-posts.php:10
+msgid "Anterior"
+msgstr "Previous"
+
+#: template-parts/post/get_prev-next-posts.php:16
+msgid "Próximo"
+msgstr "Next"
+
+#: template-parts/post/get_share-post.php:2
+msgid "Compartilhe nas redes sociais"
+msgstr "Share on social media"
+
+#~ msgid "Um desenvolvimento"
+#~ msgstr "A development"

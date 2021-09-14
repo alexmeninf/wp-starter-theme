@@ -2,11 +2,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 text-center text-lg-start">
-				<p>&copy; <?= date('Y') . ' ' . get_bloginfo('name') ?>, todos os direitos reservados.</p>
+				<p>&copy; <?= date('Y') . ' ' . get_bloginfo('name') ?>. <?php _e('Todos os direitos reservados.', 'menin') ?></p>
 			</div>
 
 			<div class="col-lg-6 text-center text-lg-end">
-				<p>Um desenvolvimento <a href="https://inovany.com.br" target="_blank" rel="noopener" title="iNova">
+				<p><?php _e('Desenvolvido por', 'menin') ?> <a href="https://inovany.com.br" target="_blank" rel="noopener" title="iNova">
 					<img src="https://comet-space.nyc3.digitaloceanspaces.com/assets/default/logo-inova-dark.png" alt="Inova" height="25">	
 					</a>
 					<a href="https://bluelizard.com.br" target="_blank" rel="noopener" title="Blue Lizard">

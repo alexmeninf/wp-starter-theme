@@ -10,7 +10,7 @@ get_header();
 if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
-<section class="spacing">
+<section class="<?php echo section_class('', true, false) ?>">
   <div class="container">
     <div class="row justify-content align-items">
       <div class="col-12">

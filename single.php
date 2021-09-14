@@ -1,8 +1,15 @@
 <?php get_header(); ?>
-<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+<?php if( have_posts() ) : while( have_posts() ) : the_post(); 
+
+// Format date
+$lang             = get_bloginfo("language"); 
+$format_date_attr = ($lang == 'pt-BR') ? get_the_date('d/m/Y') : get_the_date('Y/m/d'); 
+$format_date      = ($lang == 'pt-BR') ? get_the_date('d \d\e F, Y') : get_the_date('F d, Y'); 
+
+?>
 
 
-<section class="post-single spacing min-vh-100 d-flex align-items-center">
+<section class="<?php echo section_class('post-single') ?>">
   <div class="container">
     <div class="row">
       <main class="col-lg-8">
@@ -10,7 +17,9 @@
           
           <h2 class="title"><?php the_title(); ?></h2>
           
-          <time class="pub-date" pubdate title="Publicado em <?= get_the_date('d/m/Y') ?>"><i class="far fa-clock"></i> <?= get_the_date('d \d\e F, Y') ?></time>
+          <time class="pub-date" pubdate title="<?php printf(__('Publicado em %s', 'menin'), $format_date_attr) ?>">
+            <i class="far fa-clock"></i> <?= $format_date ?>
+          </time>
           
           <?php get_template_part('template-parts/post/get_categories'); ?>
 
@@ -28,13 +37,13 @@
 
           <div class="author-post">
             <?php echo get_avatar( get_the_author_meta('user_email'), 60 ); ?>
-            <p class="author-title" rel="author"><b>Publicado por: </b><?php echo get_the_author_meta('first_name') != '' ? get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name') : get_the_author_meta('user_nicename') ?></p>
+            <p class="author-title" rel="author"><b><?php _e('Publicado por', 'menin') ?> </b><?php echo get_the_author_meta('first_name') != '' ? get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name') : get_the_author_meta('user_nicename') ?></p>
           </div>
 
           <?php get_template_part('template-parts/post/get_prev-next-posts'); ?>
 
           <div class="comments">
-            <h2>Comentários</h2>
+            <h2><?php _e('Comentários', 'menin') ?></h2>
             <?php support_comments_facebook('post'); ?>
           </div>
 

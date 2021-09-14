@@ -2,7 +2,7 @@
 <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 
-<section class="min-vh-100 d-flex align-items-center spacing">
+<section class="<?php echo section_class() ?>">
   <div class="container<?= is_active_sidebar( 'sidebar-2' ) ? '-fluid' : '' ?>">
     <div class="row justify-content-center">
       

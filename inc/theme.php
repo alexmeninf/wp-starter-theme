@@ -8,6 +8,12 @@ function wp_after_setup_theme() {
 add_action( 'after_setup_theme', 'wp_after_setup_theme' );
 
 
+/**
+ * Supost Thumbnals
+*/
+add_theme_support( 'post-thumbnails' );
+
+
 /*
  * Remove meta tag generator 
  * Vulnerabilidade que mostra a versão do WP
@@ -15,14 +21,80 @@ add_action( 'after_setup_theme', 'wp_after_setup_theme' );
 remove_action('wp_head', 'wp_generator');
 
 
-function enable_preload_fonts() {  ?>
-		<link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-regular-400.woff2" as="font">
-		<link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-duotone-900.woff2" as="font">
-		<link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-light-300.woff2" as="font">
-		<link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-brands-400.woff2" as="font">
-	<?php
-} 
+/**
+ * enable_preload_fonts
+ *
+ * @return void
+ */
+function enable_preload_fonts() {
+
+  if (THEME_ENABLE_PRELOAD_FONT === true) : ?>
+
+    <link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-regular-400.woff2" as="font">
+    <link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-duotone-900.woff2" as="font">
+    <link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-light-300.woff2" as="font">
+    <link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-brands-400.woff2" as="font">
+
+  <?php
+  endif;
+}
+
 add_action('wp_head', 'enable_preload_fonts', 2);
+
+
+
+/**
+ * Update Layout to Login Admin
+ */
+function wp_custom_logo_in_login() {
+
+  $css = '<style type="text/css">
+    #login h1 a,
+    .login h1 a {
+      background-image: url(https://assets.comet.com.br/assets/default/blue-lizard-160x160.jpg);
+      background-repeat: no-repeat;
+      background-size: 120px;
+      height: 120px;
+      width: 120px;
+    }
+
+    body {
+      background: #141414 !important
+    }
+
+    .login #backtoblog a,
+    .login #nav a {
+      color: #adadad !important
+    }
+
+    .login #login_error,
+    .login .message,
+    .login .success,
+    .login form {
+      border-radius: 10px
+    }
+
+    .wp-core-ui .button-primary {
+      background: #000 !important;
+      border-color: #000 !important;
+      box-shadow: none !important;
+      color: #fff !important;
+      text-decoration: none !important;
+      text-shadow: none !important;
+      border-radius: 0 !important;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+      border-color: #ff0083 !important;
+      box-shadow: none !important;
+    }
+  </style>';
+
+  echo $css;
+}
+
+add_action('login_enqueue_scripts', 'wp_custom_logo_in_login');
 
 
 /**
@@ -37,20 +109,14 @@ function wc_remove_block_library_css(){
 add_action( 'wp_enqueue_scripts', 'wc_remove_block_library_css' );
 
 
-/**
- * Supost Thumbnals
-*/
-add_theme_support( 'post-thumbnails' );
-
-
 /*====================================
 =            OPTIONS PAGE            =
 ====================================*/
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
-		'page_title'  => 'Opções do site',
-		'menu_title'  => 'Opções do site',
+		'page_title'  => __('Opções do site', 'menin'),
+		'menu_title'  => __('Opções do site', 'menin'),
 		'menu_slug'   => 'opcoes',
 		'capability'  => 'edit_posts',
 		'redirect'    => false
@@ -62,41 +128,50 @@ if( function_exists('acf_add_options_page') ) {
  * Show the page name
  */
 function the_title_page() {
-	if ( is_404() ) {
-		echo 'Página não encontrada';
+  if (is_404()) {
+    echo __('Página não encontrada', 'menin');
 
-	} elseif ( is_tag() ) {
-		single_tag_title();
-		
-	} elseif ( is_category() ) {
-		single_cat_title();
+  } elseif (is_tag()) {
+    single_tag_title();
 
-	} elseif ( is_tax() ) {
-		$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
-		echo $term->name;
+  } elseif (is_category()) {
+    single_cat_title();
+    
+  } elseif (is_tax()) {
+    $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
+    echo $term->name;
 
-	} elseif ( is_day() ) {
-		echo "Arquivo de " . get_the_time('j \d\e F \d\e Y');
+  } elseif (is_day()) {
+    echo __('Registros de ', 'menin') . get_the_time('j \d\e F \d\e Y');
 
-	} elseif ( is_month() ) {
-		echo "Arquivo de " . get_the_time('F \d\e Y');
+  } elseif (is_month()) {
+    echo __('Registros de ', 'menin') . get_the_time('F \d\e Y');
 
-	} elseif ( is_year() ) {
-		echo "Arquivo de " . get_the_time('Y');
+  } elseif (is_year()) {
+    echo __('Registros de ', 'menin') . get_the_time('Y');
 
-	} elseif ( is_author() ) {
-		echo "Arquivo do autor";
+  } elseif (is_author()) {
+    echo __('Registros do autor', 'menin');
 
-	} elseif (isset($_GET['p']) && !empty($_GET['p'])) {
-		echo "Arquivo do blog";
+  } elseif (isset($_GET['p']) && !empty($_GET['p'])) {
+    echo __('Registros do blog', 'menin');
 
-	} elseif ( is_search() ) {
-		echo "Resultados da pesquisa";
-		
-	} else {
-		the_title();
-	}
+  } elseif (is_search()) {
+    echo __('Resultados da pesquisa', 'menin');
+
+  } else {
+    if (class_exists('WooCommerce')) {
+      if (is_shop()) {
+        echo __('Os melhores produtos para você', 'menin');
+      } else {
+        the_title();
+      }
+    } else {
+      the_title();
+    }
+  }
 }
+
 
 
 /**
@@ -112,11 +187,15 @@ function support_comments_facebook($order = 'footer', $url = '') {
 		<style>
 			.fb_iframe_widget_fluid_desktop iframe { width: 100% !important; }.color-facebook {color: #0554c9;}
 		</style>
+
 		<?php if (strstr($_SERVER['HTTP_USER_AGENT'], 'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'], 'iPad') || strstr($_SERVER['HTTP_USER_AGENT'], 'Mac')) : ?>
 		  <p class="text-dark ms-2" style="font-size:15px">
-			<i class="fab fa-facebook color-facebook me-1"></i> Não consegue comentar? <a href="https://facebook.com/home.php" target="_blank" rel="noreferrer" title="Conecte ao facebook" class="text-decoration-none color-facebook">Conecte aqui à sua conta do Facebook</a> em outra página e volte.
+        <i class="fab fa-facebook color-facebook me-1"></i> 
+        <?php _e('Não consegue comentar?', 'menin') ?> 
+        <?php _e('<a href="https://facebook.com/home.php" target="_blank" rel="noreferrer noopener" title="Conecte ao facebook" class="text-decoration-none color-facebook">Conecte à sua conta do Facebook</a> em outra página e volte.', 'menin') ?>
 		  </p>
 		<?php endif; ?>
+
 		<div class="comment-box">
 			<div class="fb-comments" data-order-by="reverse_time" data-href="<?php echo $url ?>" data-width="100%" data-numposts="10"></div>
 		</div>  
@@ -135,10 +214,11 @@ function support_comments_facebook($order = 'footer', $url = '') {
  * 
  * @version 1.1
  *
- * @param  mixed $current_page
- * @param  mixed $pages_count
- * @param  mixed $maxLinks
- * @return void
+ * @param  integer $current_page
+ * @param  integer $pages_count
+ * @param  integer $maxLinks
+ * 
+ * @return mixed
  */
 function get_pagination($current_page, $pages_count, $maxLinks = 2) {
   wp_reset_query();
@@ -187,7 +267,7 @@ function get_pagination($current_page, $pages_count, $maxLinks = 2) {
 
   } elseif (is_author()) {
     $url = get_author_posts_url(get_queried_object()->term_id);
-    
+
   } else {
     $url  = get_the_permalink(get_the_ID());
   }
@@ -195,18 +275,15 @@ function get_pagination($current_page, $pages_count, $maxLinks = 2) {
   $url = esc_url($url) . $args;
 
   if ($pages_count > 0) : ?>
-    <style>
-      a[disabled] {pointer-events: none;opacity: .5;user-select: none;}
-    </style>
 
     <nav aria-label="Page navigation">
-      <ul class="pagination">
+      <ul class="pagination justify-content-center">
         <?php
         // Check if the first page 
         $disable_link = ($current_page == 1) ? 'disabled' : '';
 
         echo '<li class="page-item">';
-        echo '<a class="page-link" aria-label="Previous" title="Página anterior" '. $disable_link .' href="' . $url . '&pg=1"><span>&laquo;</span></a>';
+        echo '<a class="page-link" aria-label="Previous" title="' . __('Página anterior', 'menin') . '" ' . $disable_link . ' href="' . $url . '&pg=1"><span>&laquo;</span></a>';
         echo '</li>';
 
         // Previous pages
@@ -232,11 +309,11 @@ function get_pagination($current_page, $pages_count, $maxLinks = 2) {
           endif;
 
           // check if the last page is shown
-          if ( $i == $pages_count-1 || $i == $pages_count ) $displaying_the_last = true;
+          if ($i == $pages_count - 1 || $i == $pages_count) $displaying_the_last = true;
         endfor;
 
         // Show the last page
-        if ( $current_page != $pages_count && !$displaying_the_last ) :
+        if ($current_page != $pages_count && !$displaying_the_last) :
           echo '<li class="page-item"><a class="page-link" disabled>...</a></li>';
           echo '<li class="page-item">';
           echo '<a class="page-link" href="' . $url . '&pg=' . $pages_count . '">' . $pages_count . '</a>';
@@ -244,57 +321,16 @@ function get_pagination($current_page, $pages_count, $maxLinks = 2) {
         endif;
 
         // Check if the last page 
-        $disable_link = ($current_page == $pages_count) ? 'disabled' : 'title="Próxima página"';
+        $disable_link = ($current_page == $pages_count) ? 'disabled' : 'title="' . __('Próxima página', 'menin') . '"';
 
         echo '<li class="page-item">';
-        echo '<a class="page-link" aria-label="Next" '. $disable_link .' href="' . (($current_page != $pages_count ) ? ($url . '&pg=' . ($current_page + 1)) : '' ) . '"><span>&raquo;</span></a>';
+        echo '<a class="page-link" aria-label="Next" ' . $disable_link . ' href="' . (($current_page != $pages_count) ? ($url . '&pg=' . ($current_page + 1)) : '') . '"><span>&raquo;</span></a>';
         echo '</li>';
         ?>
       </ul>
     </nav>
-<?php endif;
+  <?php endif;
 }
-
-
-
- /**
- * input
- *
- * @param  mixed $name
- * @param  mixed $type
- * @param  mixed $id
- * @return void
- */
-function input($name, $id, $type, $is_required = false, $value = '') { 
-	$value = (trim($value) != '') ? ' value="' .$value. '"' : '';
-	$required = $is_required ? 'required' : ''; 
-
-	if ($type == 'hidden') : ?>
-		<input type="<?= $type ?>" id="<?= $id ?>" name="<?= $id ?>"<?= $value ?>>
-
-	<?php elseif ($type == 'textarea') : ?>
-		<label class="form-group">
-			<textarea id="<?= $id ?>" name="<?= $id ?>"<?= $value ?> placeholder="&nbsp;" <?= $required ?>></textarea>
-			<span class="txt">
-				<?= $name ?> 
-				<?= $is_required ? '<sup class="text-danger">*</sup>' : '' ?>
-			</span>
-			<span class="bar"></span>
-		</label>
-
-	<?php else: ?>
-		<label class="form-group">
-			<input type="<?= $type ?>" id="<?= $id ?>" name="<?= $id ?>"<?= $value ?> placeholder="&nbsp;" <?= $required ?>>
-			<span class="txt">
-				<?= $name ?> 
-				<?= $is_required ? '<sup class="text-danger">*</sup>' : '' ?>
-			</span>
-			<span class="bar"></span>
-		</label>
-<?php
-	endif;
-}
-
 
 /**
  * Register widget area.
@@ -304,9 +340,9 @@ function input($name, $id, $type, $is_required = false, $value = '') {
 
 function menin_widgets_init() {
   register_sidebar( array(
-    'name'          => __( 'Widget principal esquedo', 'menin' ),
+    'name'          => __( 'Widget principal esquerdo', 'menin' ),
     'id'            => 'sidebar-2',
-    'description'   => __( 'Adicione widgets aqui, para aparecer no seu layout.', 'menin' ),
+    'description'   => __( 'Adicione widgets aqui para aparecer no seu layout.', 'menin' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h2 class="widget-title">',
@@ -351,4 +387,70 @@ function callback_theme_logo($args)
   </h1>
 <?php }
 
-add_filter('logo_theme', 'callback_theme_logo', 10, 1); ?>
+add_filter('logo_theme', 'callback_theme_logo', 10, 1);
+
+
+/**
+ * section_class
+ *
+ * @param  string $class Adicione classes na sessão principal
+ * @param  boolean $enable_default Exiba as classes padrão para cada sessão
+ * @param  boolean $full_screen Habilitar sessão com altura máxima do viewport
+ * 
+ * @return string
+ */
+function section_class($class = '', $enable_default = true, $full_screen = true) {
+
+  if ($enable_default) {
+    $class .= ' ' . 'spacing';
+  }
+
+  if ($full_screen) {
+    $class .= ' ' . 'min-vh-100 d-flex align-items-center';
+  }
+
+  $class = preg_replace('/\s{2,}/', ' ', $class);
+
+  return $class;
+}
+
+
+/**
+ * Exibe o preload no site ao antes de carregar por completo.
+ * 
+ * @return mixed
+ */
+function menin_theme_preload() {
+
+  if (THEME_ENABLE_PRELOAD === true) : ?>
+
+    <div class="preload">
+      <img src="<?= THEMEROOT ?>/assets/img/loading.svg" alt="Carregando..." height="35" width="35">
+    </div>
+
+    <script>
+      $('body').css('overflow-y', 'hidden');
+      window.addEventListener("load", function(event) {
+        $('.preload').fadeOut();
+        $('body').css('overflow-y', 'visible');
+      });
+    </script>
+
+  <?php
+  endif;
+}
+
+add_action('wp_body_open', 'menin_theme_preload');
+
+
+
+/**
+ * 
+ * Language theme
+ * 
+ */
+add_action( 'after_setup_theme', 'menin_setup_lang' );
+
+function menin_setup_lang() {
+  load_theme_textdomain( 'menin', get_template_directory() . '/languages' );
+}

@@ -2,19 +2,22 @@
   <aside class="sidebar">
 
     <div class="widget">
-      <h2>Buscar no site</h2>
+      <h2><?php _e('Buscar no site', 'menin') ?></h2>
       <?php get_search_form(); ?>
     </div>
 
     <div class="widget">
-      <h2>Categorias</h2>
+      <h2><?php _e('Categorias', 'menin') ?></h2>
       <?php get_template_part('template-parts/sidebar/get_categories'); ?>
     </div>
 
-    <?php get_template_part('template-parts/sidebar/get_tags'); ?>
+    <div class="widget">
+      <h2><?php _e('Tags', 'menin') ?></h2>
+      <?php get_template_part('template-parts/sidebar/get_tags'); ?>
+    </div>
 
     <div class="widget">
-      <h2>Arquivos</h2>
+      <h2><?php _e('Registros', 'menin') ?></h2>
       <?php get_template_part('template-parts/sidebar/get_archives'); ?>
     </div>
 

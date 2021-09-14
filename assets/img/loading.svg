@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: Alex Menin 2021 - https://github.com/alexmeninf -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" width="32px" height="32px" aria-label="Carregando..." class="menjh" viewBox="0 0 100 100">
+<defs><style type="text/css">
+<![CDATA[
+@-webkit-keyframes IGCoreSpinnerSpin8{0%{-webkit-transform:rotate(180deg);transform:rotate(180deg)}to{-webkit-transform:rotate(540deg);transform:rotate(540deg)}}@keyframes IGCoreSpinnerSpin8{0%{-webkit-transform:rotate(180deg);transform:rotate(180deg)}to{-webkit-transform:rotate(540deg);transform:rotate(540deg)}}@-webkit-keyframes IGCoreSpinnerSpin12{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes IGCoreSpinnerSpin12{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.menjh{-webkit-animation:IGCoreSpinnerSpin12 1.2s steps(12) infinite;animation:IGCoreSpinnerSpin12 1.2s steps(12) infinite}.menjh.ZyL7E{-webkit-animation:none;animation:none}
+]]>
+</style></defs>
+<rect fill="#555555" height="6" opacity="0" rx="3" ry="3" transform="rotate(-90 50 50)" width="25" x="72" y="47"></rect>
+<rect fill="#555555" height="6" opacity="0.08333333333333333" rx="3" ry="3" transform="rotate(-60 50 50)" width="25" x="72" y="47"></rect>
+<rect fill="#555555" height="6" opacity="0.16666666666666666" rx="3" ry="3" transform="rotate(-30 50 50)" width="25" x="72" y="47"></rect>
+<rect fill="#555555" height="6" opacity="0.25" rx="3" ry="3" transform="rotate(0 50 50)" width="25" x="72" y="47"></rect>
+<rect fill="#555555" height="6" opacity="0.3333333333333333" rx="3" ry="3" transform="rotate(30 50 50)" width="25" x="72" y="47"></rect>
+<rect fill="#555555" height="6" opacity="0.4166666666666667" rx="3" ry="3" transform="rotate(60 50 50)" width="25" x="72" y="47"></rect>
+<rect fill="#555555" height="6" opacity="0.5" rx="3" ry="3" transform="rotate(90 50 50)" width="25" x="72" y="47"></rect>
+<rect fill="#555555" height="6" opacity="0.5833333333333334" rx="3" ry="3" transform="rotate(120 50 50)" width="25" x="72" y="47"></rect>
+<rect fill="#555555" height="6" opacity="0.6666666666666666" rx="3" ry="3" transform="rotate(150 50 50)" width="25" x="72" y="47"></rect>
+<rect fill="#555555" height="6" opacity="0.75" rx="3" ry="3" transform="rotate(180 50 50)" width="25" x="72" y="47"></rect>
+<rect fill="#555555" height="6" opacity="0.8333333333333334" rx="3" ry="3" transform="rotate(210 50 50)" width="25" x="72" y="47"></rect>
+<rect fill="#555555" height="6" opacity="0.9166666666666666" rx="3" ry="3" transform="rotate(240 50 50)" width="25" x="72" y="47"></rect>
+</svg>

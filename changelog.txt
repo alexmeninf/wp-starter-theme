@@ -1,0 +1,8 @@
+# WP Stater Theme - por Alexandre Menin
+
+#### 3.4.0 - 2021-09-14
+
+* Feat: Adionado suporte para tradução do tema.
+* Feat: Adicionado novo post type para criação de formulários via Painel do admin.
+* Feat: Adicionado suporte para preload de página.
+* Feat: Melhoria nas chamada de classes nas sessões padrão.

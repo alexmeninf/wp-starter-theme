@@ -15,7 +15,7 @@ function the_support_material() {
 
   if ( $link ) : 
     $link_url    = $link['url'];
-    $link_title  = $link['title'] ? $link['title'] : 'Material de apoio';
+    $link_title  = $link['title'] ? $link['title'] : __('Material de apoio', 'menin');
     $link_target = $link['target'] ? $link['target'] : '_blank'; 
     
     if ( is_published($date) ) : 
@@ -64,7 +64,7 @@ function the_embed_video($iframe, $date_published, $img) {
   $html_embed .= embed_video($iframe);
   $html_embed .= '</div>';
 
-  $html_img = '<img src="'. $img['url'] .'" alt="Em breve" class="img-fluid img_coming_soon">';
+  $html_img = '<img src="'. $img['url'] .'" alt="'. __('Em breve', 'menin') .'" class="img-fluid img_coming_soon">';
 
   // Libera o vídeo meia noite, caso for uma live.
   if (get_field('enable_earlier')) {
@@ -157,8 +157,8 @@ function is_today_published_text($date) {
   $hour_event           = date('H:i', strtotime($date));
 
   if ( strtotime(date('Y-m-d H:i:s') . '-3 hours') >= strtotime($data_event_with_year . ' 00:00:00') ) {
-    return '<i class="far fa-lock-alt text-green fsp-110"></i> Hoje às ' . $hour_event . 'h';
+    return '<i class="far fa-lock-alt"></i> Hoje às ' . $hour_event . 'h';
   } else {
-    return '<i class="far fa-lock-alt text-green fsp-110"></i> Disponível dia ' . str_replace('-', '/', $data_event) . ' ('. $hour_event .')';
+    return '<i class="far fa-lock-alt"></i> Disponível dia ' . str_replace('-', '/', $data_event) . ' ('. $hour_event .')';
   }
 }

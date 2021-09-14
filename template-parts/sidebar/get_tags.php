@@ -17,11 +17,7 @@ if ($tags) {
     $html .= "<a href='{$tag_link}' class='{$tag->slug}'>";
     $html .= "{$tag->name} ({$total_posts})</a>";
   }
-  $html .= '</div>'; ?>
-
-  <div class="widget">
-    <h2>Tags</h2>
-    <?php echo $html; ?>
-  </div>
-
-<?php }
+  $html .= '</div>'; 
+  
+  echo $html;
+}

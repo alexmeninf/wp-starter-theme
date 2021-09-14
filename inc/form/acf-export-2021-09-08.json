@@ -1,0 +1,269 @@
+[
+    {
+        "key": "group_6138f0a5158fb",
+        "title": "Formulário",
+        "fields": [
+            {
+                "key": "field_6138f0cc212c8",
+                "label": "Campos",
+                "name": "campos",
+                "type": "repeater",
+                "instructions": "Adicione cada campo do seu formulário aqui.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 1,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_6138f10cd1613",
+                        "label": "Nome",
+                        "name": "input_name",
+                        "type": "text",
+                        "instructions": "Nome de exibição do campo",
+                        "required": 1,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_6138f181d1615",
+                                    "operator": "!=",
+                                    "value": "hidden"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_6138f181d1615",
+                        "label": "Tipo do campo",
+                        "name": "input_type",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "date": "Data",
+                            "email": "E-mail",
+                            "hidden": "Hidden",
+                            "number": "Número",
+                            "tel": "Telefone",
+                            "text": "Texto",
+                            "textarea": "Área de texto",
+                            "url": "URL"
+                        },
+                        "default_value": [
+                            "text"
+                        ],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 0,
+                        "return_format": "value",
+                        "ajax": 0,
+                        "placeholder": ""
+                    },
+                    {
+                        "key": "field_6138f33bd1616",
+                        "label": "Rotulo de identificação",
+                        "name": "input_id",
+                        "type": "text",
+                        "instructions": "Defina os valores dos atributos <i>name<\/i> e <i>ID<\/i> da input.",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_6138f148d1614",
+                        "label": "Valor",
+                        "name": "input_value",
+                        "type": "text",
+                        "instructions": "Valor padrão setado no campo. <br>\r\n<i>Campo opcional<\/i>",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_6138f36dd1617",
+                        "label": "Campo obrigatório?",
+                        "name": "is_required",
+                        "type": "true_false",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_6138f181d1615",
+                                    "operator": "!=",
+                                    "value": "hidden"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "15",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "",
+                        "default_value": 0,
+                        "ui": 0,
+                        "ui_on_text": "",
+                        "ui_off_text": ""
+                    },
+                    {
+                        "key": "field_613907b251006",
+                        "label": "Classes",
+                        "name": "class_name",
+                        "type": "text",
+                        "instructions": "Acione outras classes CSS na input.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_6138f7c479584",
+                "label": "Texto do botão",
+                "name": "button_text",
+                "type": "text",
+                "instructions": "Texto no botão de envio.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_6138f81c96b0f",
+                "label": "Estilo do formulário",
+                "name": "form_style",
+                "type": "select",
+                "instructions": "Escolha o modelo de layout do formulário.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "standard-basic": "Stand",
+                    "outlined-basic": "Outlined",
+                    "translucent-form": "Translucent",
+                    "default": "Padrão do tema"
+                },
+                "default_value": [
+                    "standard-basic"
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_613913e1db74a",
+                "label": "AJAX data",
+                "name": "ajax_data",
+                "type": "code",
+                "instructions": "Parametros de envio para a API.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "language": "javascript",
+                "theme": "ambiance"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "menin_form"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "permalink",
+            "the_content",
+            "excerpt",
+            "discussion",
+            "comments",
+            "revisions",
+            "slug",
+            "author",
+            "format",
+            "page_attributes",
+            "featured_image",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": true,
+        "description": ""
+    }
+]

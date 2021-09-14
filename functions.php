@@ -1,12 +1,28 @@
 <?php
-/* Warning: Don't Remove This Include */
-require_once('inc/_framework/framework.php');
+
+/**
+ * Definições do tema e funcionalidades 
+ */
+
+// Habilitar preload nas páginas
+define('THEME_ENABLE_PRELOAD', false);
+
+// Gerar meta preload na requisição das fontes do tema
+define('THEME_ENABLE_PRELOAD_FONT', false);
 
 
-# =================================
-# =           CSS Files           =
-# =================================
-/*----------  New CSS Default  ----------*/
+/**
+ * Require functions
+ */
+include 'inc/_framework/framework.php';
+include 'inc/theme.php';
+include 'inc/page-details-cpl.php';
+include 'inc/form/form.php';
+
+
+/**
+ * CSS Files
+ */
 new_css('animate-default', 'assets/plugins/wow/css/animate.css');
 new_css('bootstrap-grid', 'assets/css/bootstrap/bootstrap-grid.css');
 new_css('bootstrap-reboot', 'assets/css/bootstrap/bootstrap-reboot.css');
@@ -18,7 +34,9 @@ new_css('owl-carousel-default', 'assets/plugins/owl-carousel/css/owl.carousel.mi
 new_css('main-default', 'assets/css/main.css');
 new_css('style-default', 'style.css');
 
-/*----------  Use CSS Default  ----------*/
+/**
+ * Use CSS Default
+ */
 // use_css('animate-default');
 // use_css('bootstrap-grid');
 // use_css('bootstrap-reboot');
@@ -31,10 +49,9 @@ use_css('main-default');
 use_css('style-default');
 
 
-# ====================================
-# =           Script Files           =
-# ====================================
-/*----------  New JS Default  ----------*/
+/**
+ * Scripts Files 
+ */
 new_js('jquery-default', 'assets/plugins/jquery/jquery.min.js', true);
 new_js('utilities', 'assets/js/util.js', true);
 new_js('bootstrap-default', 'assets/plugins/bootstrap/js/bootstrap.min.js', true);
@@ -52,10 +69,10 @@ new_js('countdown', 'assets/js/countdown.js', true);
 new_js('swiped-events', 'assets/js/swiped-events.min.js', true);
 new_js('main-default', 'assets/js/main.js', true);
 
-/*----------  Use JS Default  ----------*/
-if ( ! is_plugin_active( 'elementor/elementor.php' ) ) {
-  use_js('jquery-default');
-}
+/**
+ * Use JS Default
+ */
+use_js('jquery-default');
 //use_js('utilities');
 // use_js('popper-default');
 // use_js('bootstrap-default');
@@ -71,7 +88,3 @@ use_js('smooth-scroll');
 // use_js('countdown');
 //use_js('swiped-events');
 use_js('main-default');
-
-
-include 'inc/general.php';
-include 'inc/page-details-cpl.php';

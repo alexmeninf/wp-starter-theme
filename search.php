@@ -3,7 +3,8 @@ get_header();
 
 $search = get_search_query();
 
-if ( isset($search) && $search != '' ) {
+if (isset($search) && $search != '') {
+  
   $search_post_type = array('post');
   $args_total_posts = array(
     'post_type'      => $search_post_type,
@@ -25,13 +26,14 @@ if ( isset($search) && $search != '' ) {
     'order'          => 'DESC',
     'paged'          => $current_page,
     's'              => $search,
-    '_meta_or_title' => $search);
+    '_meta_or_title' => $search
+  );
   $query_search = new WP_Query($args);
 }
 ?>
 
 
-<section class="search spacing min-vh-100 d-flex align-items-center">
+<section class="<?php echo section_class('search min-vh-50', true, false) ?>">
   <div class="container">
     <?php
     if ( isset($search) && $search != '' ) :
@@ -40,9 +42,11 @@ if ( isset($search) && $search != '' ) {
 
         <div class="row">
           <div class="col-md-12">
-            <h2 class="title-search">Resultados relacionados com '<?= $search ?>'</h2>
+            <h2 class="title-search"><?php printf(__('Resultados relacionados com %s', 'menin'), $search) ?></h2>
             <?php get_search_form() ?>
-            <p class="total-results"><?= $posts_count ?> resultados encontrados.</p>
+            <p class="total-results">
+              <?= $posts_count > 1 ? sprintf(__('Exibindo todos %s resultados encontrados.', 'menin'), $posts_count) : __('Exibindo um único resultado.', 'menin') ?>
+            </p>
             <hr>
           </div>
         </div>
@@ -66,7 +70,7 @@ if ( isset($search) && $search != '' ) {
           <div class="col-md-12 text-center">
             <?php get_search_form() ?>
             <div class="alert alert-warning" role="alert">
-              Nenhuma informação com o nome <b><?= $search ?></b> foi encontrada.
+            <?php printf(__('Nenhum resultado com o nome <b>%s</b> foi encontrado.', 'menin'), $search); ?>
             </div>
           </div>
         </div>
@@ -79,7 +83,7 @@ if ( isset($search) && $search != '' ) {
       <div class="col-md-12 text-center">
         <?php get_search_form() ?>
         <div class="alert alert-danger" role="alert">
-          Nenhuma informação foi encontrada, você deve digitar o que busca.
+          <?php _e('Nenhum resultado foi encontrado, você deve digitar o que busca.', 'menin'); ?>
         </div>
       </div>
     </div>
