@@ -2,7 +2,7 @@
 	justify-content: space-between;
 	margin-top: ($default-spacing-y / 4);
 	border-bottom: 1px solid $border-color;
-	padding-bottom: $default-spacing-y / 2;
+	padding-bottom: ($default-spacing-y / 4);
 
 	ul {
 		display: flex;
@@ -20,7 +20,7 @@
 				border-radius: 50%;
 				border: none;
 				display: block;
-				font-size: 1.5em;
+				font-size: 1.2em;
 				height: 2em;
 				line-height: 2em;
 				text-align: center;
@@ -37,21 +37,21 @@
 }
 
 .share-facebook {
-	@include buttonColor(#036be4, $white, "darken", 10%);
+	@include button(#036be4, $white, darken(#036be4, 20%), $white);
 }
 
 .share-twitter {
-	@include buttonColor(#55acee, $white, "darken", 10%);
+	@include button(#55acee, $white, darken(#55acee, 20%), $white);
 }
 
 .share-linkedin {
-	@include buttonColor(#007bb5, $white, "darken", 10%);
+	@include button(#007bb5, $white, darken(#007bb5, 20%), $white);
 }
 
 .share-whatsapp {
-	@include buttonColor(#25D366, $white, "darken", 10%);
+	@include button(#25D366, $white, darken(#25D366, 20%), $white);
 }
 
 .share-telegram {
-	@include buttonColor(#0088cc, $white, "lighten", 10%);
+	@include button(#0088cc, $white, darken(#0088cc, 20%), $white);
 }

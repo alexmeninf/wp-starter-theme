@@ -10,7 +10,7 @@
 				<!-- Description -->
 				<p class="wow fadeInUp" data-wow-delay=".3s"><?php _e('Desculpe, mas parece que a página que você acessou não existe ou pode ter sido removida.', 'menin') ?></p>
 				<!-- Button -->
-				<a href="<?php bloginfo('url') ?>" class="btn-theme wow fadeInUp scale-hover-out" data-wow-delay=".4s"><?php _e('Voltar ao Início', 'menin') ?></a>
+				<a href="<?php bloginfo('url') ?>" class="btn-theme wow fadeInUp" data-wow-delay=".4s"><?php _e('Voltar ao Início', 'menin') ?></a>
 			</div>
 		</div>
 	</div>

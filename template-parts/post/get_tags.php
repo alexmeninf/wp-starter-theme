@@ -7,7 +7,7 @@ if ( $post_tags ) {
 ?>
 
 <div class="single-tags">
-  <span><?php _e('Tags', 'menin') ?>:</span>
+  <span><i class="fal fa-tags"></i> <?php _e('Tags', 'menin') ?>:</span>
   <ul>
     <?php 
     foreach ( $post_tags as $tag ) {

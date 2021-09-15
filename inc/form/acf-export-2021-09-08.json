@@ -152,7 +152,7 @@
                         "label": "Classes",
                         "name": "class_name",
                         "type": "text",
-                        "instructions": "Acione outras classes CSS na input.",
+                        "instructions": "Adicione outras classes CSS na input.",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {

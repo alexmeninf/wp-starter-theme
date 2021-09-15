@@ -4,20 +4,23 @@
 // Navigation
 @import "template-parts/navigation";
 
-// // Post
-// @import "template-parts/post/author";
-// @import "template-parts/post/categories";
-// @import "template-parts/post/pagination-post";
-// @import "template-parts/post/share-post";
-// @import "template-parts/post/single";
-// @import "template-parts/post/tags";
+// Post
+@import "template-parts/post/author";
+@import "template-parts/post/categories";
+@import "template-parts/post/pagination-post";
+@import "template-parts/post/share-post";
+@import "template-parts/post/single";
+@import "template-parts/post/tags";
 
-// // Sidebar
-// @import "template-parts/sidebar/archives";
-// @import "template-parts/sidebar/categories";
-// @import "template-parts/sidebar/searchform";
-// @import "template-parts/sidebar/sidebar";
-// @import "template-parts/sidebar/tags";
+// Sidebar
+@import "template-parts/sidebar/archives";
+@import "template-parts/sidebar/categories";
+@import "template-parts/sidebar/searchform";
+@import "template-parts/sidebar/sidebar";
+@import "template-parts/sidebar/tags";
+
+// Search
+@import "template-parts/search";
 
 // // Front Page base
 // @import 'template-parts/front-page/';

@@ -41,13 +41,12 @@ if (isset($search) && $search != '') {
       if ( $query_search->have_posts() ) : ?>
 
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 mb-5">
             <h2 class="title-search"><?php printf(__('Resultados relacionados com %s', 'menin'), $search) ?></h2>
             <?php get_search_form() ?>
-            <p class="total-results">
+            <p class="search-msg" role="info">
               <?= $posts_count > 1 ? sprintf(__('Exibindo todos %s resultados encontrados.', 'menin'), $posts_count) : __('Exibindo um único resultado.', 'menin') ?>
             </p>
-            <hr>
           </div>
         </div>
 
@@ -67,9 +66,9 @@ if (isset($search) && $search != '') {
       <?php else: ?>
 
         <div class="row">
-          <div class="col-md-12 text-center">
+          <div class="col-md-12">
             <?php get_search_form() ?>
-            <div class="alert alert-warning" role="alert">
+            <div class="search-msg" role="alert">
             <?php printf(__('Nenhum resultado com o nome <b>%s</b> foi encontrado.', 'menin'), $search); ?>
             </div>
           </div>
@@ -79,14 +78,14 @@ if (isset($search) && $search != '') {
 
     else: ?>
 
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <?php get_search_form() ?>
-        <div class="alert alert-danger" role="alert">
-          <?php _e('Nenhum resultado foi encontrado, você deve digitar o que busca.', 'menin'); ?>
+      <div class="row">
+        <div class="col-md-12">
+          <?php get_search_form() ?>
+          <div class="search-msg" role="alert">
+            <?php _e('Nenhum resultado foi encontrado, você deve digitar o que busca.', 'menin'); ?>
+          </div>
         </div>
       </div>
-    </div>
 
     <?php
     endif; ?>

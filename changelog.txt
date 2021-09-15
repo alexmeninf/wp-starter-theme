@@ -1,8 +1,18 @@
 # WP Stater Theme - por Alexandre Menin
 
+#### 3.4.1 - 2021-09-15
+* Fix: Melhorias no layout das páginas e na folha de estilo.
+* Fix: Movido o navbar para inc/theme.php e corrigido bugs.
+* Fix: Removido registro de sidebar-2.
+* Feat: Atualizado tradução em en_US.
+* Feat: Adicionada novas classes WP no item do post.
+* Feat: Adicionado breadcrumbs.
+
 #### 3.4.0 - 2021-09-14
 
 * Feat: Adionado suporte para tradução do tema.
 * Feat: Adicionado novo post type para criação de formulários via Painel do admin.
 * Feat: Adicionado suporte para preload de página.
 * Feat: Melhoria nas chamada de classes nas sessões padrão.
+* Feat: Adicionado suporte para theme child.
+* Fix: corrigido bugs e reecrito alguns códigos.

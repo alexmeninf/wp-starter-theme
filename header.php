@@ -11,11 +11,6 @@
 
 </head>
 <body <?php body_class() ?>>
-	<?php wp_body_open(); ?>
 
 	<?php
-
-	// Título das páginas
-	if ( ! (is_front_page() || is_home()) && get_option('enable_navbar_page') == true ) 
-		get_template_part('template-parts/navigation/navbar');
-	?>
+	wp_body_open();

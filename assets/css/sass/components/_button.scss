@@ -7,7 +7,7 @@
   font-weight: 700;
   text-decoration: unset;
   user-select: none;
-  padding: 0.65em 1.1em;
+  padding: 0.5em 1.1em;
   margin: 0.25rem 0;
   text-align: center;
   vertical-align: middle;
@@ -18,7 +18,7 @@
     margin-right: 10px;
   }
 
-  @include buttonColor($color-default, darken($color-default, 70%), "lighten", 10%, $color-default, darken($color-default, 70%));
+  @include button($color-default, $white, darken($color-default, 20%), $white);
 }
 
 .btn-small {
@@ -27,5 +27,5 @@
 
 .btn-theme-inverse {
   border: 1px solid;
-  @include buttonColor(transparent, $color-default, "lighten", 10%, $color-default,  darken($color-default, 70%));
+  @include button(transparent, $color-default, $color-default, $white);
 }

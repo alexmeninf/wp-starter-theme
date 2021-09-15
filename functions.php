@@ -8,6 +8,9 @@
 define('THEME_ENABLE_PRELOAD', false);
 
 // Gerar meta preload na requisição das fontes do tema
+define('THEME_ENABLE_NAVBAR', true);
+
+// Gerar meta preload na requisição das fontes do tema
 define('THEME_ENABLE_PRELOAD_FONT', false);
 
 
@@ -54,13 +57,13 @@ use_css('style-default');
  */
 new_js('jquery-default', 'assets/plugins/jquery/jquery.min.js', true);
 new_js('utilities', 'assets/js/util.js', true);
+new_js('popper-default', 'assets/plugins/popper.min.js', true);
 new_js('bootstrap-default', 'assets/plugins/bootstrap/js/bootstrap.min.js', true);
 new_js('jarallax', 'assets/plugins/jarallax/jarallax.min.js', true);
 new_js('jquery.mask-default', 'assets/plugins/jquery-mask/js/jquery.mask.min.js', true);
 new_js('lazyload-default', 'assets/plugins/lazyload.min.js', true);
 new_js('lightgallery-default', 'assets/plugins/lightgallery/js/lightgallery.min.js', true);
 new_js('owl-carousel-default', 'assets/plugins/owl-carousel/js/owl.carousel.min.js', true);
-new_js('popper-default', 'assets/plugins/popper.min.js', true);
 new_js('sweetalert-default', 'assets/plugins/sweetalert/sweetalert2.all.min.js', true);
 new_js('tilt.js', 'assets/plugins/tilt.js/tilt.jquery.min.js', true);
 new_js('wow-default', 'assets/plugins/wow/js/wow.min.js', true);

@@ -12,7 +12,7 @@ $format_date      = ($lang == 'pt-BR') ? get_the_date('d \d\e F, Y') : get_the_d
 <section class="<?php echo section_class('post-single') ?>">
   <div class="container">
     <div class="row">
-      <main class="col-lg-8">
+      <main class="col-lg-8 col-xxl-9">
         <article>
           
           <h2 class="title"><?php the_title(); ?></h2>
@@ -43,7 +43,7 @@ $format_date      = ($lang == 'pt-BR') ? get_the_date('d \d\e F, Y') : get_the_d
           <?php get_template_part('template-parts/post/get_prev-next-posts'); ?>
 
           <div class="comments">
-            <h2><?php _e('Comentários', 'menin') ?></h2>
+            <h2><i class="fal fa-comments"></i> <?php _e('Comentários', 'menin') ?></h2>
             <?php support_comments_facebook('post'); ?>
           </div>
 

@@ -9,7 +9,7 @@ $args = array(
 	'format'          => 'html', 
 	'before'          => '',
 	'after'           => '',
-	'show_post_count' => false,
+	'show_post_count' => true,
 	'echo'            => 1,
 	'order'           => 'DESC'
 ); ?>

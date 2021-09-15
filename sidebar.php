@@ -1,4 +1,4 @@
-<div class="col-lg-4">
+<div class="col-lg-4 col-xxl-3">
   <aside class="sidebar">
 
     <div class="widget">

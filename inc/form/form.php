@@ -33,7 +33,7 @@ function post_type_menin_form()
     'show_ui'               => true,
     'show_in_menu'          => true,
     'menu_position'         => 80,
-    'menu_icon'             => THEMEROOT . '/inc/form/icon.png',
+    'menu_icon'             => THEMEROOT . '/assets/img/icons/admin-icon-form.png',
     'show_in_admin_bar'     => true,
     'show_in_nav_menus'     => true,
     'can_export'            => true,

@@ -6,4 +6,10 @@
   a {
     color: $color-default;
   }
+
+  .list {
+    @include media(sm) {
+      padding-left: 15px;
+    }
+  }
 }

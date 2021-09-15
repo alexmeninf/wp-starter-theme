@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('UTF');
+date_default_timezone_set('UTC');
 
 /**
  * the_support_material

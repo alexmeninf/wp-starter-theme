@@ -16,7 +16,7 @@ module.exports = function (grunt) {
           "assets/plugins/smooth-scroll.js",
           // 'assets/plugins/sweetalert/sweetalert2.all.min.js',
           // 'assets/plugins/tilt.js/tilt.jquery.min.js',
-          //"assets/plugins/wow/js/wow.min.js",
+          // "assets/plugins/wow/js/wow.min.js",
           // 'assets/js/countdown.js',
           // 'assets/js/swiped-events.min.js',
           "assets/js/main.js",

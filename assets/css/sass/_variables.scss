@@ -1,5 +1,5 @@
 // Colors
-$color-default: #6143e7 !default;
+$color-default: #6e38d3 !default;
 
 // spacing between sections
 $default-spacing-y: 7.5em !default;
@@ -29,7 +29,7 @@ $default-spacing-x: 0 !default;
 }
 
 // components/_button.scss
-@mixin buttonColor($bg, $color, $density, $amount: 0%, $bgHover, $colorHover) {
+@mixin button($bg, $color, $bgHover, $colorHover) {
   background-color: $bg;
   color: $color;
   border-color: $bgHover;
@@ -37,16 +37,8 @@ $default-spacing-x: 0 !default;
   &:hover,
   &:active,
   &:focus {
-    @if $density=='lighten' {
-      background-color: lighten($bgHover, $amount);
-      border-color: lighten($bgHover, $amount);
-    }
-
-    @else if $density=='darken' {
-      background-color: darken($bgHover, $amount);
-      border-color: darken($bgHover, $amount);
-    }
-
+    background-color: $bgHover;
+    border-color: $bgHover;
     color: $colorHover;
   }
 }

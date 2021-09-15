@@ -1,9 +1,6 @@
 <?php
 
 /**
- * 
- * Template filho customizado
- * 
  * Template parent: wp-starter-theme/functions.php
  * Documentation URL: https://developer.wordpress.org/themes/advanced-topics/child-themes/
  * 

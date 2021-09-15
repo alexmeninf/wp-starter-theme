@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: wp-starter-theme\n"
-"POT-Creation-Date: 2021-09-14 17:39-0300\n"
-"PO-Revision-Date: 2021-09-14 17:41-0300\n"
+"POT-Creation-Date: 2021-09-15 12:07-0300\n"
+"PO-Revision-Date: 2021-09-15 12:08-0300\n"
 "Last-Translator: \n"
 "Language-Team: https://github.com/alexmeninf\n"
 "Language: en_US\n"
@@ -14,8 +14,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr_x\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
 
-#: 404.php:9 inc/theme.php:132 index.php:9
+#: 404.php:9 inc/theme.php:130 inc/theme.php:665 index.php:9
 msgid "Página não encontrada"
 msgstr "Page not found"
 
@@ -30,14 +31,6 @@ msgstr ""
 #: 404.php:13 index.php:13
 msgid "Voltar ao Início"
 msgstr "Back to home"
-
-#: assets/plugins/bootstrap/js/bootstrap.min.js:6
-msgid "modal"
-msgstr ""
-
-#: assets/plugins/bootstrap/js/bootstrap.min.js:6
-msgid "toast"
-msgstr ""
 
 #: footer.php:5
 msgid "Todos os direitos reservados."
@@ -129,13 +122,14 @@ msgstr "Support material"
 msgid "Em breve"
 msgstr "Coming soon"
 
-#: inc/theme.php:118 inc/theme.php:119
+#: inc/theme.php:114 inc/theme.php:115
 msgid "Opções do site"
 msgstr "Site Options"
 
-#: inc/theme.php:145 inc/theme.php:148 inc/theme.php:151
+#: inc/theme.php:144 inc/theme.php:148 inc/theme.php:151 inc/theme.php:497
+#: inc/theme.php:500 inc/theme.php:503
 msgid "Registros de "
-msgstr "Archives of"
+msgstr "Archives of "
 
 #: inc/theme.php:154
 msgid "Registros do autor"
@@ -168,21 +162,33 @@ msgstr ""
 "facebook\">Connect to your Facebook account</a> on another page and come "
 "back."
 
-#: inc/theme.php:286
+#: inc/theme.php:288
 msgid "Página anterior"
 msgstr "Previous page"
 
-#: inc/theme.php:324
+#: inc/theme.php:326
 msgid "Próxima página"
 msgstr "Next page"
 
-#: inc/theme.php:343
+#: inc/theme.php:347
 msgid "Widget principal esquerdo"
 msgstr "Main left widget"
 
-#: inc/theme.php:345
+#: inc/theme.php:349
 msgid "Adicione widgets aqui para aparecer no seu layout."
 msgstr "Add widgets here to appear on your layout."
+
+#: inc/theme.php:433
+msgid "Carregando..."
+msgstr "Loading..."
+
+#: inc/theme.php:657
+msgid "Page"
+msgstr ""
+
+#: inc/theme.php:661
+msgid "Resultado da pesquisa por"
+msgstr "Search results for"
 
 #: search.php:45
 #, php-format
@@ -198,20 +204,16 @@ msgstr "Displaying all %s found results."
 msgid "Exibindo um único resultado."
 msgstr "Showing a single result."
 
-#: search.php:73
+#: search.php:72
 #, php-format
 msgid "Nenhum resultado com o nome <b>%s</b> foi encontrado."
 msgstr "No results with the name <b>%s</b> were found."
 
-#: search.php:86
+#: search.php:85
 msgid "Nenhum resultado foi encontrado, você deve digitar o que busca."
 msgstr "No results were found, you must type what you are looking for."
 
-#: searchform.php:5
-msgid "Pesquisar..."
-msgstr "Search..."
-
-#: searchform.php:7
+#: searchform.php:6 searchform.php:8
 msgid "Buscar por:"
 msgstr "Search for:"
 
@@ -235,16 +237,16 @@ msgstr "Tags"
 msgid "Registros"
 msgstr "Archives"
 
-#: single.php:13
+#: single.php:20
 #, php-format
 msgid "Publicado em %s"
 msgstr "Posted in %s"
 
-#: single.php:33
+#: single.php:40
 msgid "Publicado por"
 msgstr "Published by"
 
-#: single.php:39
+#: single.php:46
 msgid "Comentários"
 msgstr "Comments"
 
@@ -270,6 +272,9 @@ msgstr "Next"
 #: template-parts/post/get_share-post.php:2
 msgid "Compartilhe nas redes sociais"
 msgstr "Share on social media"
+
+#~ msgid "Pesquisar..."
+#~ msgstr "Search..."
 
 #~ msgid "Um desenvolvimento"
 #~ msgstr "A development"

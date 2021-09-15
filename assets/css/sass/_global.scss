@@ -10,7 +10,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: $gray-500;
   border-radius: 5px;
-//   border: 1px solid $body-bg;
+  border: 1px solid $body-bg;
 
   &:hover {
     background-color: $gray-600;
@@ -22,9 +22,12 @@ button {
   @extend %transition;
 }
 
-p {
-  font-size: calc(1rem + 0.2vw);
+a[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
 
+p {
   &:last-child {
     margin-bottom: 0;
   }
