@@ -2,12 +2,26 @@
   padding: 30px 0;
 
   p {
-    font-size: 12px;
+    font-size: 11px;
     margin-bottom: 0;
 
     @include media(md) {
-      font-size: 13px;
+      font-size: 12px;
       line-height: 32px;
+    }
+  }
+
+  .developer {
+    a {
+      text-decoration: none;
+
+      &:not(:last-child) {
+        margin-right: 6px;
+      }
+    }
+
+    img {
+      height: 2em;
     }
   }
 }

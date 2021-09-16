@@ -1,6 +1,6 @@
 # WP Starter Theme
 
-Version: 3.4.1
+Version: 3.4.2
 Author: Alexandre Menin
 GitHub Plugin URI: [https://github.com/alexmeninf/wp-starter-theme]( "https://github.com/alexmeninf/wp-starter-theme")
 
@@ -25,9 +25,9 @@ Encontre várias classes prontas para utilizar no seu layout em **/assets/css/sa
 ## Plugins
 Diversos plugins para seu site em **assets/plugins**
 
-- [jQuery](https://jquery.com/) - v3.5.0
+- [jQuery](https://jquery.com/) - v3.6.0
 - [Popper](https://popper.js.org/) - v2.5.4
-- [Bootstrap](https://getbootstrap.com/) - v5.0 Beta
+- [Bootstrap](https://getbootstrap.com/) - v5.1.1
 - [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) - v2.3.4
 - [Font Awesome Pro](https://fontawesome.com) - v5.14.0
 - [LightGallery](http://sachinchoolur.github.io/lightGallery/) - v1.6.12

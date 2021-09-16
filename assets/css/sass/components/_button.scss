@@ -1,3 +1,10 @@
+button {
+  border-radius: 0.4em;
+  border: 1px solid #f1f1f1;
+  font-size: 0.95rem;
+  padding: 0.5em 0.75em;
+}
+
 .btn-theme {
   border: none;
   border-radius: $border-radius;
@@ -22,7 +29,7 @@
 }
 
 .btn-small {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .btn-theme-inverse {

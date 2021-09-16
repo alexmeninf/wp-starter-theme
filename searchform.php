@@ -7,6 +7,6 @@
       name="s">
     <span class="screen-reader-text txt"><?php echo _e( 'Buscar por:', 'menin' ) ?></span>
     <span class="bar"></span>
-    <button type="submit" class="search-submit" value="<?php echo esc_attr_e( 'Buscar', 'menin' ) ?>"><i class="far fa-search"></i></button>
+    <button type="submit" class="search-submit" value="<?php echo esc_attr_e( 'Buscar', 'menin' ) ?>" aria-label="Search button"><i class="far fa-search"></i></button>
   </label>
 </form>

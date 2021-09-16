@@ -2,10 +2,8 @@
 <?php if( have_posts() ) : while( have_posts() ) : the_post(); 
 
 // Format date
-$lang             = get_bloginfo("language"); 
-$format_date_attr = ($lang == 'pt-BR') ? get_the_date('d/m/Y') : get_the_date('Y/m/d'); 
-$format_date      = ($lang == 'pt-BR') ? get_the_date('d \d\e F, Y') : get_the_date('F d, Y'); 
-
+$lang        = get_bloginfo("language"); 
+$format_date = ($lang == 'pt-BR') ? get_the_date('d \d\e F, Y') : get_the_date('F d, Y'); 
 ?>
 
 
@@ -17,7 +15,7 @@ $format_date      = ($lang == 'pt-BR') ? get_the_date('d \d\e F, Y') : get_the_d
           
           <h2 class="title"><?php the_title(); ?></h2>
           
-          <time class="pub-date" pubdate title="<?php printf(__('Publicado em %s', 'menin'), $format_date_attr) ?>">
+          <time class="pub-date" pubdate title="<?php printf(__('Publicado em %s', 'menin'), $format_date) ?>">
             <i class="far fa-clock"></i> <?= $format_date ?>
           </time>
           
@@ -56,5 +54,9 @@ $format_date      = ($lang == 'pt-BR') ? get_the_date('d \d\e F, Y') : get_the_d
 </section> <!-- /.post-single -->
 
 
-<?php endwhile; endif; ?>
+<?php 
+
+support_comments_facebook('footer');
+
+endwhile; endif; ?>
 <?php get_footer(); ?>

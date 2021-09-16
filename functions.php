@@ -27,10 +27,10 @@ include 'inc/form/form.php';
  * CSS Files
  */
 new_css('animate-default', 'assets/plugins/wow/css/animate.css');
-new_css('bootstrap-grid', 'assets/css/bootstrap/bootstrap-grid.css');
-new_css('bootstrap-reboot', 'assets/css/bootstrap/bootstrap-reboot.css');
-new_css('bootstrap-utilities', 'assets/css/bootstrap/bootstrap-utilities.css');
-new_css('bootstrap', 'assets/css/bootstrap/bootstrap.css');
+new_css('bootstrap-grid', 'assets/plugins/bootstrap/css/bootstrap-grid.css');
+new_css('bootstrap-reboot', 'assets/plugins/bootstrap/css/bootstrap-reboot.css');
+new_css('bootstrap-utilities', 'assets/plugins/bootstrap/css/bootstrap-utilities.css');
+new_css('bootstrap', 'assets/plugins/bootstrap/css/bootstrap.css');
 new_css('fontawesome-default', 'assets/plugins/fontawesome/css/all.min.css');
 new_css('lightgallery-default', 'assets/plugins/lightgallery/css/lightgallery.min.css');
 new_css('owl-carousel-default', 'assets/plugins/owl-carousel/css/owl.carousel.min.css');

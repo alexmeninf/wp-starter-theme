@@ -2,36 +2,61 @@ $bg-form-color: $body-bg; // Background
 $color-text-form: $body-color; // Cor do texto
 $color-focus-default: $color-default; // Cor destaque
 
-// Espaçamento
-$input-space-y: 10px;
-$input-space-x: 13px;
+// Spacing
+$input-space-y: 0.85em;
+$input-space-x: 0.75em;
+
+/*
+ * Reset fields
+ */
+input:not([type="radio"]):not([type="checkbox"]),
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input,
+select,
+optgroup,
+textarea {
+  border-radius: 0.4em;
+  border: 1px solid #f1f1f1;
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.6em;
+  padding: 0.5em 0.75em;
+  width: 100%;
+  @extend %transition;
+}
+
+textarea {
+  max-height: 250px;
+  min-height: 63px;
+}
 
 %input {
   background: none;
   border: 0;
+  box-shadow: none;
   color: $color-text-form;
-  font-size: 1em;
-  transition: all 0.3s ease;
-  width: 100%;
+  margin-bottom: 0;
 }
 
 .material-form {
-  input:not([type="radio"]):not([type="checkbox"]),
-  textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-
-  textarea {
-    max-height: 250px;
-    min-height: 63px;
+  .form-group {
+    border-radius: 0.4em;
+    margin-bottom: 0.3em;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
   }
 
   input:not([type="radio"]):not([type="checkbox"]),
   select,
   textarea {
-    padding: ($input-space-y + 10px) $input-space-x $input-space-y;
+    background-color: $bg-form-color;
+    padding: ($input-space-y + 0.4em) $input-space-x $input-space-y;
     @extend %input;
 
     // Autofill
@@ -65,14 +90,8 @@ $input-space-x: 13px;
     }
   }
 
-  .form-group {
-    position: relative;
-    margin-bottom: 1rem;
-    width: 100%;
-    font-size: 1rem;
-  }
-
   .txt {
+    background: $bg-form-color;
     color: $gray-600;
     cursor: auto;
     font-size: 1em;
@@ -101,11 +120,15 @@ $input-space-x: 13px;
 }
 
 .standard-basic {
+  .form-group {
+    border-radius: 0;
+  }
+
   input:not([type="radio"]):not([type="checkbox"]),
   select,
   textarea {
-    background-color: rgba(213, 213, 213, 0.25);
     border-bottom: 1px solid $border-color;
+    border-radius: 0;
 
     &:hover {
       border-bottom-width: 2px;
@@ -114,6 +137,8 @@ $input-space-x: 13px;
 
     &:focus {
       + span {
+        transform: translate(-4px, -11px) scale(0.66);
+
         + .bar {
           transform: scaleX(1);
         }
@@ -135,31 +160,27 @@ $input-space-x: 13px;
   select,
   textarea {
     border: 1px solid $border-color;
-    border-radius: 4px;
 
     &:hover,
     &:focus {
       border-color: $color-focus-default;
     }
   }
-
-  .txt {
-    background: $bg-form-color;
-  }
 }
 
+// Input com opacidade.
 .translucent-form {
   input:not([type="radio"]):not([type="checkbox"]),
   select,
   textarea {
-    @extend %input;
-    border-radius: 4px;
     background-color: rgba(213, 213, 213, 0.25);
-    margin-bottom: 1rem;
-    padding: $input-space-y $input-space-x;
+    border-color: transparent;
+    backdrop-filter: blur(16px) saturate(130%);
+    -webkit-backdrop-filter: blur(16px) saturate(130%);
 
     @include input-placeholder {
-      color: $color-text-form;
+      color: $white !important;
+      opacity: 0.5;
     }
   }
 
@@ -169,16 +190,35 @@ $input-space-x: 13px;
   }
 }
 
+// Suporte para bg escuro
 .input-light {
   input,
   textarea,
-  select {
-    color: $white;
+  select,
+  .txt {
+    color: $white !important;
+  }
 
+  &:not(.translucent-form) {
+    input,
+    textarea,
+    select {
+      background: transparent !important;
+      border-color: #ffffff42 !important;
+    }
+  }
+
+  input,
+  textarea,
+  select {
     @include input-placeholder {
       color: $white !important;
       opacity: 0.5;
     }
+  }
+
+  option {
+    color: $dark;
   }
 }
 

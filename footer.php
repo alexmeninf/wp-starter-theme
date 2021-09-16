@@ -6,11 +6,11 @@
 			</div>
 
 			<div class="col-lg-6 text-center text-lg-end">
-				<p><?php _e('Desenvolvido por', 'menin') ?> <a href="https://inovany.com.br" target="_blank" rel="noopener" title="iNova">
-					<img src="https://comet-space.nyc3.digitaloceanspaces.com/assets/default/logo-inova-dark.png" alt="Inova" height="25">	
+				<p class="developer"><?php _e('Desenvolvido por', 'menin') ?> <a href="https://inovany.com.br" target="_blank" rel="noopener" title="iNova">
+						<img src="https://assets.comet.com.br/assets/default/logo-inova-dark.png" alt="Inova">
 					</a>
 					<a href="https://bluelizard.com.br" target="_blank" rel="noopener" title="Blue Lizard">
-						<img src="https://comet-space.nyc3.cdn.digitaloceanspaces.com/assets/default/logo-bluelizard-default.png" alt="Blue Lizard" height="25">	
+						<img src="https://assets.comet.com.br/assets/default/logo-bluelizard-default.png" alt="Blue Lizard">
 					</a>
 				</p>
 			</div>
@@ -19,8 +19,6 @@
 </footer>
 
 <?php wp_footer(); ?>
-
-<?php if (is_single()) support_comments_facebook(); ?>
 
 </body>
 

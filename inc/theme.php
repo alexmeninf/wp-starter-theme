@@ -197,13 +197,13 @@ function support_comments_facebook($order = 'footer', $url = '') {
 		<?php endif; ?>
 
 		<div class="comment-box">
-			<div class="fb-comments" data-order-by="reverse_time" data-href="<?php echo $url ?>" data-width="100%" data-numposts="10"></div>
+      <div class="fb-comments" data-order-by="reverse_time" data-href="<?php echo $url ?>" data-width="100%" data-numposts="10"></div>
 		</div>  
 
 	<?php elseif ($order == 'footer') : ?>
 
 		<div id="fb-root"></div>
-		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v11.0" nonce="zjk2iiq5"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v12.0" nonce="MNNwhZip"></script>
 				
 	<?php endif;
 }
@@ -246,7 +246,7 @@ function get_pagination($current_page, $pages_count, $maxLinks = 2) {
   endif;
 
   if (is_search()) {
-    $args .= (!array_key_exists("s", $_GET)) ? 's=' . get_search_query() : '';
+    $args .= 's=' . get_search_query();
     $url = get_bloginfo('url');
 
   } elseif (is_category()) {
@@ -450,7 +450,7 @@ function custom_breadcrumbs() {
   // Configuracoes
   $separator          = '/';
   $breadcrums_id      = 'breadcrumbs';
-  $breadcrums_class   = 'breadcrumb';
+  $breadcrums_class   = 'breadcrumb mb-0';
   $home_title         = 'Home';
 
   // Se você tiver algum tipo de postagem personalizado com taxonomias personalizadas, coloque o nome da taxonomia abaixo (e.g. product_cat)

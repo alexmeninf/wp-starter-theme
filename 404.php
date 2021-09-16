@@ -5,6 +5,7 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-7 col-lg-6 text-center py-5">
+				<span class="title-404">404</span>
 				<!-- Title -->
 				<h1 class="headline-5 wow fadeInUp " data-wow-delay=".2s"><?php _e('Página não encontrada', 'menin') ?></h1>
 				<!-- Description -->

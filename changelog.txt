@@ -1,5 +1,12 @@
 # WP Stater Theme - por Alexandre Menin
 
+#### 3.4.2 - 2021-09-16
+* Feat: Melhorias no UI das inputs.
+* Feat: Atualizado plugin Bootstrap para v5.1.1.
+* Feat: Atualizado plugin jQuery para v3.6.0.
+* Fix: melhorias no código.
+* Fix: Corrigido problemas de acessibilidade.
+
 #### 3.4.1 - 2021-09-15
 * Fix: Melhorias no layout das páginas e na folha de estilo.
 * Fix: Movido o navbar para inc/theme.php e corrigido bugs.
