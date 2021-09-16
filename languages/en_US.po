@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: wp-starter-theme\n"
-"POT-Creation-Date: 2021-09-15 12:07-0300\n"
-"PO-Revision-Date: 2021-09-15 12:08-0300\n"
+"POT-Creation-Date: 2021-09-16 15:41-0300\n"
+"PO-Revision-Date: 2021-09-16 15:42-0300\n"
 "Last-Translator: \n"
 "Language-Team: https://github.com/alexmeninf\n"
 "Language: en_US\n"
@@ -16,11 +16,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: assets\n"
 
-#: 404.php:9 inc/theme.php:130 inc/theme.php:665 index.php:9
+#: 404.php:10 inc/theme.php:130 inc/theme.php:643 index.php:9
 msgid "Página não encontrada"
 msgstr "Page not found"
 
-#: 404.php:11 index.php:11
+#: 404.php:12 index.php:11
 msgid ""
 "Desculpe, mas parece que a página que você acessou não existe ou pode ter "
 "sido removida."
@@ -28,7 +28,7 @@ msgstr ""
 "Sorry, but it looks like the page you accessed doesn't exist or may have "
 "been removed."
 
-#: 404.php:13 index.php:13
+#: 404.php:14 index.php:13
 msgid "Voltar ao Início"
 msgstr "Back to home"
 
@@ -126,8 +126,8 @@ msgstr "Coming soon"
 msgid "Opções do site"
 msgstr "Site Options"
 
-#: inc/theme.php:144 inc/theme.php:148 inc/theme.php:151 inc/theme.php:497
-#: inc/theme.php:500 inc/theme.php:503
+#: inc/theme.php:144 inc/theme.php:148 inc/theme.php:151 inc/theme.php:475
+#: inc/theme.php:478 inc/theme.php:481
 msgid "Registros de "
 msgstr "Archives of "
 
@@ -170,23 +170,15 @@ msgstr "Previous page"
 msgid "Próxima página"
 msgstr "Next page"
 
-#: inc/theme.php:347
-msgid "Widget principal esquerdo"
-msgstr "Main left widget"
-
-#: inc/theme.php:349
-msgid "Adicione widgets aqui para aparecer no seu layout."
-msgstr "Add widgets here to appear on your layout."
-
-#: inc/theme.php:433
+#: inc/theme.php:411
 msgid "Carregando..."
 msgstr "Loading..."
 
-#: inc/theme.php:657
+#: inc/theme.php:635
 msgid "Page"
 msgstr ""
 
-#: inc/theme.php:661
+#: inc/theme.php:639
 msgid "Resultado da pesquisa por"
 msgstr "Search results for"
 
@@ -237,16 +229,16 @@ msgstr "Tags"
 msgid "Registros"
 msgstr "Archives"
 
-#: single.php:20
+#: single.php:18
 #, php-format
 msgid "Publicado em %s"
 msgstr "Posted in %s"
 
-#: single.php:40
+#: single.php:38
 msgid "Publicado por"
 msgstr "Published by"
 
-#: single.php:46
+#: single.php:44
 msgid "Comentários"
 msgstr "Comments"
 
@@ -272,6 +264,32 @@ msgstr "Next"
 #: template-parts/post/get_share-post.php:2
 msgid "Compartilhe nas redes sociais"
 msgstr "Share on social media"
+
+#: template-parts/post/get_share-post.php:10
+msgid "Compartilhe no Facebook"
+msgstr "Share on Facebook"
+
+#: template-parts/post/get_share-post.php:20
+msgid "Compartilhe no Twitter"
+msgstr "Share on Twitter"
+
+#: template-parts/post/get_share-post.php:30
+msgid "Compartilhe no Linkedin"
+msgstr "Share on Linkedin"
+
+#: template-parts/post/get_share-post.php:40
+msgid "Compartilhe no WhatsApp"
+msgstr "Share on WhatsApp"
+
+#: template-parts/post/get_share-post.php:50
+msgid "Compartilhe no Telegram"
+msgstr "Share on Telegram"
+
+#~ msgid "Widget principal esquerdo"
+#~ msgstr "Main left widget"
+
+#~ msgid "Adicione widgets aqui para aparecer no seu layout."
+#~ msgstr "Add widgets here to appear on your layout."
 
 #~ msgid "Pesquisar..."
 #~ msgstr "Search..."

@@ -4,8 +4,10 @@
 * Feat: Melhorias no UI das inputs.
 * Feat: Atualizado plugin Bootstrap para v5.1.1.
 * Feat: Atualizado plugin jQuery para v3.6.0.
+* Feat: Atualizado tradução em en_US.
 * Fix: melhorias no código.
 * Fix: Corrigido problemas de acessibilidade.
+* Fix: Removido plugins não utilizados: Light Gallery, Tilt, Owl Carousel, Jarallax, Popper.
 
 #### 3.4.1 - 2021-09-15
 * Fix: Melhorias no layout das páginas e na folha de estilo.

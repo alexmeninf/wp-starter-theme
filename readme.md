@@ -23,7 +23,7 @@ GitHub Plugin URI: [https://github.com/alexmeninf/wp-starter-theme]( "https://gi
 Encontre várias classes prontas para utilizar no seu layout em **/assets/css/sass**
 
 ## Plugins
-Diversos plugins para seu site em **assets/plugins**
+Diversos plugins para baixar para o seu tema, coloque em **assets/plugins**
 
 - [jQuery](https://jquery.com/) - v3.6.0
 - [Popper](https://popper.js.org/) - v2.5.4
@@ -37,7 +37,7 @@ Diversos plugins para seu site em **assets/plugins**
 - [Tilt.js](http://gijsroge.github.io/tilt.js/) - v1.2.1
 - [Smooth scroll](https://github.com/gblazex/smoothscroll-for-websites) - v1.4.10
 - [Lazysizes](https://github.com/aFarkas/lazysizes) - v5.3.2
-
+- [ScrollMagic](https://scrollmagic.io/) - v2.0.8
 
 
 ## Imagens
