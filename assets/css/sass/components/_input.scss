@@ -1,6 +1,6 @@
 $bg-form-color: $body-bg; // Background
 $color-text-form: $body-color; // Cor do texto
-$color-focus-default: $color-default; // Cor destaque
+$color-focus-default: #{var(--theme-color)}; // Cor destaque
 
 // Spacing
 $input-space-y: 0.85em;

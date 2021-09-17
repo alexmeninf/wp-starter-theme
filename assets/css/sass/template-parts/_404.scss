@@ -6,7 +6,7 @@
     font-size: calc(9em + 2.5vw);
     line-height: 1;
     font-weight: 900;
-    -webkit-text-stroke: 1px $color-default;
+    -webkit-text-stroke: 1px var(--theme-color);
     color: transparent;
   }
 } 

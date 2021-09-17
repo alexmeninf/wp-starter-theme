@@ -37,7 +37,7 @@
 
     &:before {
       content: '';
-      background-color: $color-default;
+      background-color: var(--theme-color);
       display: inline-block;
       height: 2px;
       margin-right: 10px;

@@ -1,3 +1,7 @@
+:root {
+  --theme-color: #{$color-default};
+}
+
 * {
   outline: none !important;
 }
@@ -43,7 +47,7 @@ p {
 }
 
 .text-default {
-  color: $color-default !important;
+  color: var(--theme-color) !important;
 }
 
 // Preload

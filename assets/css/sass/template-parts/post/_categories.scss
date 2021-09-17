@@ -4,7 +4,7 @@
   margin-bottom: $default-spacing-y / 2;
 
   a {
-    color: $color-default;
+    color: var(--theme-color);
   }
 
   .list {

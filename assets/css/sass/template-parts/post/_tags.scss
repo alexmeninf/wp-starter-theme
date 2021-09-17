@@ -15,7 +15,7 @@
     display: inline-block;
 
     a {
-      color: $color-default;
+      color: var(--theme-color);
     }
   }
 }

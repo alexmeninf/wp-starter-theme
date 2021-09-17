@@ -8,7 +8,7 @@
 
       &:hover {
         background-color: #fbfbfb;
-        color: $color-default;
+        color: var(--theme-color);
       }
     }
   }

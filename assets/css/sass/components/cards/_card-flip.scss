@@ -48,7 +48,7 @@
   width: 100%;
 
   &.front {
-    background-color: $color-default;
+    background-color: var(--theme-color);
     color: $white;
   }
 

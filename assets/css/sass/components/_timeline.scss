@@ -1,5 +1,5 @@
 $timeline-color-line: $gray-400;
-$timeline-bg-color: $color-default;
+$timeline-bg-color: #{var(--theme-color)};
 $timeline-color-text: $white;
 
 .timeline {

@@ -55,7 +55,7 @@
     box-shadow: 4px 0 13px rgba(0, 0, 0, 0.35);
     height: 100%;
     position: relative;
-    background: $color-default;
+    background: var(--theme-color);
     left: -100%;
     width: 80%;
     max-width: 320px;

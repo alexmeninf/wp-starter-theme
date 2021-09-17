@@ -5,8 +5,8 @@
 
 	[class*=nav-] {
 		background: $body-bg;
-		border: 1px solid $color-default;
-		color: $color-default;
+		border: 1px solid var(--theme-color);
+		color: var(--theme-color);
 		padding: 6px 20px;
 
 		i {
