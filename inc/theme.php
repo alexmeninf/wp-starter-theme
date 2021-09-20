@@ -658,3 +658,22 @@ add_action( 'after_setup_theme', 'menin_setup_lang' );
 function menin_setup_lang() {
   load_theme_textdomain( 'menin', get_template_directory() . '/languages' );
 }
+
+
+/**
+ * 
+ * Create functions
+ * Caso o plugin ACF não seja ativado, criar funções.
+ *
+ */
+if ( ! function_exists('get_field') ) {
+  function get_field() {
+    return;
+  }
+}
+
+if ( ! function_exists('the_field') ) {
+  function the_field() {
+    return;
+  }
+}

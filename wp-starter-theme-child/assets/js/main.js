@@ -8,14 +8,7 @@ jQuery(function ($) {
   //   }
   // })
   // .trigger("keyup");
-
-
-  //// Light gallery
-  // $('#lightgallery').lightGallery({
-  //   download: false,
-  //   selector: '.img-select'
-  // });
-
+  
   // // animate
   //$(window).on('load', function() {
     // new WOW().init();

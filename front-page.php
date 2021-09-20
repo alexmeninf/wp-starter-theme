@@ -7,7 +7,6 @@
       <div class="col-12 text-center pb-4" style="border-bottom: 1px solid #dedede52">
         <h1 class="headline-1">Bem-vindo ao <br>WP Starter Theme!</h1>
         <p class="text-white fs-3" style="text-shadow: 2px 1px 4px #4040406b;">Desenvolvido por Menin</p>
-        <p style="color:#a5a5a5;">Versão 3.4.2</p>
       </div>
 
       <div class="col-12 mt-4 text-center">

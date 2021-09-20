@@ -1,5 +1,11 @@
 # WP Stater Theme - por Alexandre Menin
 
+#### 3.4.3 - 2021-09-20
+* Feat: Introduzido a constate STYLESHEET para chama de get_stylesheet_directory_uri().
+* Feat: Adicionado nova action menin_footer_open.
+* Fix: Corrigido erro na chamada do diretório do tema filho para new_js e new_css.
+* Fix: Movido as pastas CSS e JS para o tema filho.
+
 #### 3.4.2 - 2021-09-16
 * Feat: Melhorias no UI das inputs.
 * Feat: Atualizado plugin Bootstrap para v5.1.1.
@@ -10,12 +16,12 @@
 * Fix: Removido plugins não utilizados: Light Gallery, Tilt, Owl Carousel, Jarallax, Popper.
 
 #### 3.4.1 - 2021-09-15
-* Fix: Melhorias no layout das páginas e na folha de estilo.
-* Fix: Movido o navbar para inc/theme.php e corrigido bugs.
-* Fix: Removido registro de sidebar-2.
 * Feat: Atualizado tradução em en_US.
 * Feat: Adicionada novas classes WP no item do post.
 * Feat: Adicionado breadcrumbs.
+* Fix: Melhorias no layout das páginas e na folha de estilo.
+* Fix: Movido o navbar para inc/theme.php e corrigido bugs.
+* Fix: Removido registro de sidebar-2.
 
 #### 3.4.0 - 2021-09-14
 

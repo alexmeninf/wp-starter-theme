@@ -17,7 +17,6 @@ define('THEME_ENABLE_PRELOAD_FONT', false);
 /**
  * Require functions
  */
-include 'inc/_framework/framework.php';
 include 'inc/theme.php';
 include 'inc/page-details-cpl.php';
 include 'inc/form/form.php';
