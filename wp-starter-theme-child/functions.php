@@ -1,15 +1,7 @@
 <?php
 
-/**
- * Template parent: wp-starter-theme/functions.php
- * Documentation URL: https://developer.wordpress.org/themes/advanced-topics/child-themes/
- * 
- * @version 1.0.0
- * 
- */
-
-include 'inc/_framework/framework.php';
-include 'inc/custom-theme.php';
+include get_template_directory() . '/inc/_framework/framework.php';
+include get_stylesheet_directory() . '/inc/custom-theme.php';
 
 /**
  * CSS Files

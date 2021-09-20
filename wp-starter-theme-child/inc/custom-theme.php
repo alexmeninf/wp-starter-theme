@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * callback_theme_footer
+ * Footer
+ * 
+ */
 function callback_theme_footer() { ?>
 
   <footer class="footer-site">

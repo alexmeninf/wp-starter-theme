@@ -434,7 +434,7 @@ function callback_navbar_header() {
 
   if (THEME_ENABLE_NAVBAR == true) {
 
-    if ( !(is_front_page() || is_home()) || get_field('enable_navbar_breadcrumb') != false ) {
+    if ( !(is_front_page() || is_home()) ) {
       get_template_part('template-parts/navbar');
     }
   }
@@ -632,7 +632,7 @@ function custom_breadcrumbs() {
       echo '<li class="item-current item-current-' . $userdata->user_nicename . '"><span class="bread-current bread-current-' . $userdata->user_nicename . '" title="' . $userdata->display_name . '">' . 'Author: ' . $userdata->display_name . '</span></li>';
     
     } else if (get_query_var('paged')) {
-      echo '<li class="item-current item-current-' . get_query_var('paged') . '"><span class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">' . __('Page') . ' ' . get_query_var('paged') . '</span></li>';
+      echo '<li class="item-current item-current-' . get_query_var('paged') . '"><span class="bread-current bread-current-' . get_query_var('paged') . '" title="' . __('Página', 'menin') . ' ' . get_query_var('paged') . '">' . __('Página', 'menin') . ' ' . get_query_var('paged') . '</span></li>';
     
     } else if (is_search()) {
       // Página Search
@@ -657,23 +657,4 @@ add_action( 'after_setup_theme', 'menin_setup_lang' );
 
 function menin_setup_lang() {
   load_theme_textdomain( 'menin', get_template_directory() . '/languages' );
-}
-
-
-/**
- * 
- * Create functions
- * Caso o plugin ACF não seja ativado, criar funções.
- *
- */
-if ( ! function_exists('get_field') ) {
-  function get_field() {
-    return;
-  }
-}
-
-if ( ! function_exists('the_field') ) {
-  function the_field() {
-    return;
-  }
 }

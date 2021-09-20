@@ -1,4 +1,4 @@
-<form role="search" method="get" class="search-form material-form outlined-basic" action="<?php echo home_url( '/' ); ?>">
+<form role="search" method="get" class="search-form material-form outlined-basic" action="<?php echo home_url( '/' ); ?>" autocomplete="off">
   <label class="form-group">
     <input type="search" class="search-field" 
       placeholder="&nbsp;" 
