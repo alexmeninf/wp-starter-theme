@@ -1,5 +1,8 @@
 # WP Stater Theme - por Alexandre Menin
 
+#### 3.5.0 - 2021-09-21
+* Feat: Adicionado suporte para mudança da aparência do tema, também nativo com o SO.
+
 #### 3.4.3 - 2021-09-20
 * Feat: Introduzido a constante STYLESHEET para chamada de get_stylesheet_directory_uri()
 * Feat: Adicionada nova action menin_footer_open em footer.php

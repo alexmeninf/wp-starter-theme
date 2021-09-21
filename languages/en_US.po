@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: wp-starter-theme\n"
-"POT-Creation-Date: 2021-09-20 15:38-0300\n"
-"PO-Revision-Date: 2021-09-20 15:39-0300\n"
+"POT-Creation-Date: 2021-09-21 17:26-0300\n"
+"PO-Revision-Date: 2021-09-21 17:27-0300\n"
 "Last-Translator: \n"
 "Language-Team: https://github.com/alexmeninf\n"
 "Language: en_US\n"
@@ -31,6 +31,18 @@ msgstr ""
 #: 404.php:14 index.php:13
 msgid "Voltar ao Início"
 msgstr "Back to home"
+
+#: inc/dark-mode.php:141
+msgid "Selecione a aparência do site"
+msgstr "Select site appearance"
+
+#: inc/dark-mode.php:147
+msgid "Clara"
+msgstr "Light"
+
+#: inc/dark-mode.php:151
+msgid "Escura"
+msgstr "Dark"
 
 #: inc/form/form.php:17
 msgid "Formulários"
@@ -277,11 +289,13 @@ msgstr "Share on WhatsApp"
 msgid "Compartilhe no Telegram"
 msgstr "Share on Telegram"
 
-#~ msgid "Todos os direitos reservados."
-#~ msgstr "All rights reserved."
+#: wp-starter-theme-child/inc/custom-theme.php:14
+msgid "Todos os direitos reservados."
+msgstr "All rights reserved."
 
-#~ msgid "Desenvolvido por"
-#~ msgstr "Developed by"
+#: wp-starter-theme-child/inc/custom-theme.php:18
+msgid "Desenvolvido por"
+msgstr "Developed by"
 
 #~ msgid "Widget principal esquerdo"
 #~ msgstr "Main left widget"

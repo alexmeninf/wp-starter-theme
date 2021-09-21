@@ -66,9 +66,15 @@
 
           <div class="col">
             <h1 class="text-default" id="support-wp">Suporte Wordpress</h1>
-            <hr class="my-5">
+            <hr class="mt-5">
+
+            <div class="mt-5">
+              <h3>Aparência</h3>
+              <p>Na versão 3.5.0 foi adicionado suporte para mudança de cor do tema. (Habilite ENABLE_COLOR_SCHEME_MODE em functions.php)</p>
+              <?php do_shortcode('[color_scheme_toggle]') ?>
+            </div>
             
-            <div>
+            <div class="mt-5">
               <h3>Tradução</h3>
               <p>A partir da versão 3.4.0 foi adicionado suporte de mudança de lingua para en_US ou pt_BR.</p>
             </div>
